@@ -1,9 +1,11 @@
 server:
   port: 8761
 
+
+# Configure this Discovery Server
 eureka:
-  client:
+  instance:
+    hostname: localhost
+  client:  # Not a client, don't register with yourself
     registerWithEureka: false
     fetchRegistry: false
-  server:
-    waitTimeInMsWhenSyncEmpty: 0
